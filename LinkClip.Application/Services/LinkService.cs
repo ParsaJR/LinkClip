@@ -101,7 +101,7 @@ namespace LinkClip.Application.Services
             shortUrl.OriginalUrl = uri;
             shortUrl.CreateDate = DateTime.Now;
             shortUrl.Token = Generate.Token();
-            shortUrl.Value = new Uri($"https://parsajr.xyz/{shortUrl.Token}"); 
+            shortUrl.Value = new Uri($"https://parsajr.xyz/{shortUrl.Token}"); //Create Link With Your BaseURL
             return shortUrl;
         }
     }
