@@ -1,0 +1,70 @@
+﻿@using LinkClip.Application.DTOs.Account
+@model EditUserDTO
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+<h2 class="text-light mb-5">
+    @ViewData["Title"]
+</h2>
+<hr class="text-light mb-5" />
+
+<div class="row">
+    <form asp-area="Admin" asp-controller="Account" asp-action="EditUser" method="post">
+        <input type="hidden" asp-for="UserId" />
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">FirstName</span>
+                    <input class="form-control text-white" asp-for="FirstName">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">LastName</span>
+                    <input class="form-control text-white" asp-for="LastName">
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">PhoneNumber</span>
+                    <input class="form-control text-white" readonly="@(true)" asp-for="Mobile">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="IsAdmin" id="flexCheckDefault">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                        IsAdmin
+                    </label>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="IsBlocked" id="flexCheckDefault">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                        IsBlocked
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row align-items-center text-center mt-5">
+            <div class="col-md-12">
+                <input class="btn btn-primary" value="Apply" type="submit" />
+            </div>
+        </div>
+       
+       
+
+
+       
+       
+    </form>
+    
+</div>

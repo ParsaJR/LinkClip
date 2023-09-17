@@ -1,0 +1,83 @@
+﻿@model LinkClip.Application.DTOs.Account.LoginUserDTO
+@{
+    ViewData["Title"] = "Login";
+}
+@{
+    Layout = null;
+}
+
+@* <section class="h-100 mt-5">
+    <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+            <div class="card-wrapper">
+                <div class="card fat">
+                    <div class="card-body">
+                        <h4 class="card-title">Login</h4>
+                        <form method="POST" class="my-login-validation">
+                            <div class="form-group">
+                                <label for="email">Phone Number</label>
+                                <input asp-for="Mobile" class="form-control" autofocus>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Password</label>
+                                <input asp-for="Password" class="form-control" type="password" >
+                              
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" name="remember" id="remember" asp-for="RememberMe" class="custom-control-input">
+                                    <label for="remember" class="custom-control-label">Remember Me</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-0">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    Login
+                                </button>
+                            </div>
+                            <div class="mt-4 text-center">
+                                Don't have an account? <a asp-controller="Account" asp-action="Register">Create One</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    Copyright &copy; 2017 &mdash; Your Company
+                </div>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <partial name="_HeaderRefrence" />
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+    <form method="POST" class="text-center" asp-controller="Account" asp-action="Login">
+    <div class="container">
+        <div class="h-100 w-100 d-flex justify-content-center align-items-center flex-column">
+            <a href="/" class="fw-bold display-5 header pb-4">LinkClip</a>
+                <input type="text" asp-for="Mobile" class=" mb-3 logininput" placeholder="Mobile">
+                <input type="password" asp-for="Password" class=" mb-3 logininput" placeholder="Password">
+                <span class="text-danger" asp-validation-for="Mobile"></span>
+                <span class="text-danger" asp-validation-for="Password"></span>
+                <br>
+                <button type="submit" class="custombtn mt-3">Login</button>
+                <a asp-controller="Account" asp-action="Register" class="custombtn mt-3 d-flex justify-content-center align-items-center">Create Account</a>
+        </div>
+    </div>
+    </form>
+    <partial name="_FooterRefrence" />
+    <partial name="_Message" />
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+﻿@using LinkClip.Domain.ViewModels.Link
+@using LinkClip.Application.Utils
+@model List<AllLinkViewModel>
+
+<div class="d-flex d-flex justify-content-between">
+    <h2 class="text-light">
+        @ViewData["Title"]
+    </h2>
+</div>
+
+
+
+<hr class="text-light mb-5" />
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>OriginalURL</th>
+                <th>Token</th>
+                <th>ShortLink</th>
+                <th>CreateDate</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var link in Model)
+            {
+                <tr>
+                     <td>@link.OriginalUrl</td>
+                     <td>@link.Token</td>
+                     <td>@link.Value</td>
+                     <td>@link.CreateDate.ToShamsi()</td>
+                </tr>
+            }
+
+
+
+        </tbody>
+
+    </table>
+}
+else
+{
+    <div class="alert alert-warning">
+        <p>Nothing To Show !</p>
+    </div>
+}
