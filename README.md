@@ -14,5 +14,5 @@ LinkClip is a free tool to shorten URLs and generate short links .
   "LinkClipConnection": "Data Source=.;Initial Catalog=LinkClipDb;Integrated Security=True;TrustServerCertificate=True"
 }
 ```
-* Build & Start The App . Migrations will be performed automatically
+* Build & Start The App . Migrations will be performed automatically .
 
