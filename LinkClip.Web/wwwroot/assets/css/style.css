@@ -115,20 +115,20 @@ header {
 }
 
 .custombtn {
-  line-height: 1;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 18px;
-  border-radius: 5px;
-  width: 200px;
-  height: 50px;
-  font-weight: bold;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 4px solid #179e43;
-  transition: 0.3s;
-  background-color: #19d256;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    min-width: 200px;
+    min-height: 50px;
+    font-weight: bold;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 4px solid #179e43;
+    transition: 0.3s;
+    background-color: #19d256;
 }
 
 .custombtn:hover {

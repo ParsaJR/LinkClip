@@ -1,18 +1,25 @@
 .form-control {
-  display: inline-block;
+    display: inline-block;
 }
+
 .logininput {
-  padding: 15px;
-  font-size: 20px;
-  border-width: 5px;
-  border-color: #cccccc;
-  background-color: #777777;
-  color: #000000;
-  border-style: solid;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
-  text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+    padding: 15px;
+    font-size: 20px;
+    border-width: 5px;
+    border-color: #cccccc;
+    background-color: #777777;
+    color: #000000;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+    text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
 }
-.logininput:focus {
-  outline: none;
-}
+
+    .logininput:focus {
+        outline: none;
+    }
+
+    .logininput::placeholder {
+        color: #363636;
+        opacity: 1;
+    }
